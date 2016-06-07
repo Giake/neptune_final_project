@@ -24,15 +24,14 @@ OK, here we go.
 
 ## Introduction and Goals
 
-The question I want to answer is whether we can create more robust phylogenies by combining
-morphological and mollecular data in the same analysis. Separate analysis can be run for
-both the molecular and morphological data and compared with the combined phylogeny.
+The goal of my project is to produce a code that will enable fast manipulation of raw  morphological data downloaded from online repositories. The output we would like to have is a
+nexus file that can be input for phylogenetic analysis. If time allows we can extend the code to format also molecular data
 
 The methods I will use to do this are basic methods of data input and manipulation. Morphological data will be input as text files,
 using regular expressions and data wrangling to make data easier to work with.
 Molecular data will be formated similarly and emphasis will be given in processing the data and
 producing data matrixes/matrix probably using a dictionary of strings. 
-After formatting of the data files sepparately we will combine them and concatinate the various matrixes to use them in the tree producing software "Tree"
+After formatting of the data files sepparately we will combine them and concatinate the various matrixes to use them in the tree producing software "..."
 for input in a phylogenetic program.
 
 The data I will use are partly simulation and possibly publicly available. I plan to have a small test data sample of 4 spieces and if that proves succesful we can expand and input more data in the code we produced.
