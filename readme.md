@@ -20,15 +20,22 @@ Some guidelines and tips:
 
 OK, here we go.
 
-# Bioinformatics project
+# Combining trees
 
 ## Introduction and Goals
 
-The goal of my project is to answer the question, What is...?
+The question I want to answer is whether we can create more robust phylogenies by combining
+morphological and mollecular data in the same analysis. Separate analysis for can be run for
+both the molecular and morphological data and compared with the combined phylogeny.
 
-The methods I will use to do this are...
+The methods I will use to do this are basic methods of data input and manipulation. Morphological data will be input as text files,
+using regular expressions and data wrangling to make data easier to work with.
+Molecular data will be formated similarly and emphasis will be given in processing the data and
+producing data matrixes/matrix probably using a dictionary of strings. 
+After formatting of the data files sepparately we will combine them and concatinate the various matrixes to use them in the tree producing software "Tree"
+for input in a phylogenetic program.
 
-The data I will use are (my own data/ data publicly available at YYY/ simulations)
+The data I will use are partly simulation and possibly publicly available. I plan to have a small test data sample of 4 spieces and if that proves succesful we can expand and input more data in the code we produced.
 
 ## Methods
 
@@ -49,5 +56,4 @@ The biggest difficulty in implementing these analyses was...
 If I did these analyses again, I would...
 
 ## References
-
 
