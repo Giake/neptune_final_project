@@ -25,7 +25,7 @@ OK, here we go.
 ## Introduction and Goals
 
 The question I want to answer is whether we can create more robust phylogenies by combining
-morphological and mollecular data in the same analysis. Separate analysis for can be run for
+morphological and mollecular data in the same analysis. Separate analysis can be run for
 both the molecular and morphological data and compared with the combined phylogeny.
 
 The methods I will use to do this are basic methods of data input and manipulation. Morphological data will be input as text files,
