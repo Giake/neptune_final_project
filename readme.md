@@ -24,10 +24,9 @@ OK, here we go.
 
 ## Introduction and Goals
 
-The goal of my project is to produce a code that will enable fast manipulation of raw  morphological data downloaded from online repositories. The output we would like to have is a
-nexus file that can be input for phylogenetic analysis. If time allows we can extend the code to format also molecular data
+The goal of my project is to produce a searchable database code that will enable fast manipulation of raw  morphological data. This database will be easily updated through manipulation of the excel source files. The output we would like to have is information related only to the fossil species in question and will enable fast searches in a huge morphological database.
 
-The methods I will use to do this are basic methods of data input and manipulation. Morphological data will be input as text files,
+The methods I will use to do this are basic methods of data input and manipulation. Data will be input as text files, excel files
 using regular expressions and data wrangling to make data easier to work with.
 Molecular data will be formated similarly and emphasis will be given in processing the data and
 producing data matrixes/matrix probably using a dictionary of strings. 
