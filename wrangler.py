@@ -19,6 +19,9 @@ import csv
 #			print data
 
 Morphodict = {}
+#Geodict = {}
+#Makerdict = {}
+#Referencedict = {}
 
 #open a file
 InFileName = sys.argv[1]
@@ -42,10 +45,14 @@ for Line in datafile:
 		Specieskey = (Datalist[2].replace(';',',').replace(',','').split ( ' ') [0])
 
 
+
 		print ('SPECIES'' {}'.format (Datalist[2]))
 
 		Morphodict [ str(Specieskey) ] = [Datalist [1] , Datalist [3] , Datalist [4]]
-		
+		#Geodict [str(Specieskey)] = Datalist [1]
+		#Makerdict [str(Specieskey)] = Datalist [3]
+		#Referencedict [str(Specieskey)] = Datalist [4]
+
 
 		if len(Datalist [1]) == 0: print ('\t''?') 
 		else: print ('\t''{}'.format (Datalist[1]))
@@ -61,13 +68,44 @@ for Line in datafile:
 #print (Morphodict) 
 
 # Get the columns wanted by the user, which follow the file name
-fields = sys.argv[2]
+fields = sys.argv[2:]
+Specieskey = fields[0]
+Attributes = fields[1:]
+print ("\n\n\n")
+print ("Species:")
+print (Specieskey)
+print ("\n")
+
+if Specieskey not in Morphodict:
+	print ("Go find it")
+else:
+	if "geography" in Attributes:
+		print ("Result: Geography")
+		print (Morphodict[Specieskey][0])
+
+	if "maker" in Attributes:
+		print ("Result: Maker")
+		print (Morphodict[Specieskey][1])
+
+	if "reference" in Attributes:
+		print ("Result: Reference")
+		print (Morphodict[Specieskey][2])
+
+	if "all" in Attributes:
+		print ("Result: All Data")
+		print (Morphodict[Specieskey])
+	print ("\n\n\n")
+
+	print ("Analysis Concluded")
+
+	print ("\n\n")
 
 # Print the column header
 #print ( '\t'.join(fields) )
+# Print the requested field for each
+#print (Morphodict[fields])
 
-# Print the requested field for each observation obs
-print (Morphodict[fields])
+
 
 
 	#print (Line)
