@@ -20,12 +20,24 @@ import csv
 
 
 #open a file
+InFileName = sys.argv[1]
+datafile = open (InFileName,"r")
 
-datafile = open ("trace.csv","r")
+LineNumber = 0
 
 for Line in datafile:
 	Line = Line.strip()
-	print (Line)
+
+	if LineNumber == 0:
+		Headerlist = Line.split( '\t' )
+		print ("Header List " + str(Headerlist))
+	else:
+	   	Datalist = Line.split( '\t' )
+		print ("Species data" + str(Datalist))
+
+	LineNumber = LineNumber + 1  
+
+	#print (Line)
 #print "Name of file:", datafile.name
 
 
@@ -36,7 +48,7 @@ for Line in datafile:
 #for Line in InFile:
 #	Line = Line.split(",")
 
-headertypes = []
+headertype = []
 
 speciesdata = []
 
