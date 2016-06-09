@@ -20,7 +20,7 @@ Some guidelines and tips:
 
 OK, here we go.
 
-# Combining trees
+# Search and get data and image
 
 ## Introduction and Goals
 
@@ -33,7 +33,7 @@ producing data matrixes/matrix probably using a dictionary of strings.
 After formatting of the data files sepparately we will combine them and concatinate the various matrixes to use them in the tree producing software "..."
 for input in a phylogenetic program.
 
-The data I will use are partly simulation and possibly publicly available. I plan to have a small test data sample of 4 spieces and if that proves succesful we can expand and input more data in the code we produced.
+The data I will use are partly simulation and personnaly collected. I plan to have a small  data sample of a few species and if that proves succesful we can expand and input more data in the code we produced.
 
 ## Methods
 
