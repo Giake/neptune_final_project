@@ -24,8 +24,9 @@ Morphodict = {}
 InFileName = sys.argv[1]
 datafile = open (InFileName,"r")
 
-LineNumber = 0
+#DNAseq=raw_input ('Enter species name: ')
 
+LineNumber = 0
 
 
 for Line in datafile:
@@ -37,9 +38,12 @@ for Line in datafile:
 	else:
 	   	Datalist = Line.split( ':' )
 		#print ("Species data" + str(Datalist))
+		#Datalist[2] = Datalist[2].split ( ',' )
+		Specieskey = (Datalist[2].replace(';',',').replace(',','').split ( ' ') [0])
+
 		print ('SPECIES'' {}'.format (Datalist[2]))
 
-		Morphodict [ Datalist[2] ] = Datalist [0]
+		Morphodict [ Specieskey ] = Datalist [0]
 
 		if len(Datalist [1]) == 0: print ('\t''?') 
 		else: print ('\t''{}'.format (Datalist[1]))
