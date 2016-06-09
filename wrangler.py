@@ -29,11 +29,15 @@ for Line in datafile:
 	Line = Line.strip()
 
 	if LineNumber == 0:
-		Headerlist = Line.split( '\t' )
-		print ("Header List " + str(Headerlist))
+		Headerlist = Line.split( ',' )
+		#print ("Header List " + str(Headerlist))
 	else:
-	   	Datalist = Line.split( '\t' )
-		print ("Species data" + str(Datalist))
+	   	Datalist = Line.split( ',' )
+		#print ("Species data" + str(Datalist))
+		print ('SPECIES'' {}'.format (Datalist[2]))
+		print ('\t''{}'.format (Datalist[1]))
+		print ('\t''{}'.format (Datalist[3]))
+		print ('\t''{}'.format (Datalist[4]))
 
 	LineNumber = LineNumber + 1  
 
