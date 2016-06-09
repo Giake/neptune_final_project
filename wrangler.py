@@ -41,9 +41,11 @@ for Line in datafile:
 		#Datalist[2] = Datalist[2].split ( ',' )
 		Specieskey = (Datalist[2].replace(';',',').replace(',','').split ( ' ') [0])
 
+
 		print ('SPECIES'' {}'.format (Datalist[2]))
 
-		Morphodict [ Specieskey ] = Datalist [0]
+		Morphodict [ str(Specieskey) ] = [Datalist [1] , Datalist [3] , Datalist [4]]
+		
 
 		if len(Datalist [1]) == 0: print ('\t''?') 
 		else: print ('\t''{}'.format (Datalist[1]))
@@ -56,7 +58,17 @@ for Line in datafile:
 
 	LineNumber = LineNumber + 1 
 
-print (Morphodict) 
+#print (Morphodict) 
+
+# Get the columns wanted by the user, which follow the file name
+fields = sys.argv[2]
+
+# Print the column header
+#print ( '\t'.join(fields) )
+
+# Print the requested field for each observation obs
+print (Morphodict[fields])
+
 
 	#print (Line)
 #print "Name of file:", datafile.name
@@ -69,9 +81,6 @@ print (Morphodict)
 #for Line in InFile:
 #	Line = Line.split(",")
 
-headertype = []
-
-speciesdata = []
 
 #print list
 
