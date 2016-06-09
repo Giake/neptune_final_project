@@ -18,12 +18,15 @@ import csv
 #		for data in row:
 #			print data
 
+Morphodict = {}
 
 #open a file
 InFileName = sys.argv[1]
 datafile = open (InFileName,"r")
 
 LineNumber = 0
+
+
 
 for Line in datafile:
 	Line = Line.strip()
@@ -35,6 +38,9 @@ for Line in datafile:
 	   	Datalist = Line.split( ':' )
 		#print ("Species data" + str(Datalist))
 		print ('SPECIES'' {}'.format (Datalist[2]))
+
+		Morphodict [ Datalist[2] ] = Datalist [0]
+
 		if len(Datalist [1]) == 0: print ('\t''?') 
 		else: print ('\t''{}'.format (Datalist[1]))
 		if len(Datalist [3]) == 0: print ('\t''?') 
@@ -42,9 +48,11 @@ for Line in datafile:
 		if len(Datalist [4]) == 0: print ('\t''?') 
 		else: print ('\t''{}'.format (Datalist[4]))
 
+ 
 
+	LineNumber = LineNumber + 1 
 
-	LineNumber = LineNumber + 1  
+print (Morphodict) 
 
 	#print (Line)
 #print "Name of file:", datafile.name
