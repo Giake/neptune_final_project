@@ -5,18 +5,13 @@
 
 import re
 import sys #for arguments
-import csv
+import csv #seems unecessary
 
 #arguments = sys.argv
 #species_data = sys.argv[1] #filename is argument 1
 #with open (species_data, 'ru') as f:
 	
 	#data = list (list(rec) for rec in csv.reader(f, delimiter=','))
-#print(reader)
-#	for row in data:
-#		print row[0]
-#		for data in row:
-#			print data
 
 Morphodict = {}
 #Geodict = {}
@@ -72,7 +67,8 @@ fields = sys.argv[2:]
 Specieskey = fields[0]
 Attributes = fields[1:]
 print ("\n\n\n")
-print ("Species:")
+print ("Species Searched:")
+print ("\n")
 print (Specieskey)
 print ("\n")
 
@@ -94,11 +90,11 @@ else:
 	if "all" in Attributes:
 		print ("Result: All Data")
 		print (Morphodict[Specieskey])
-	print ("\n\n\n")
+	print ("\n")
 
 	print ("Analysis Concluded")
 
-	print ("\n\n")
+	print ("\n")
 
 # Print the column header
 #print ( '\t'.join(fields) )
