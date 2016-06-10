@@ -40,7 +40,7 @@ for Line in datafile:
 		Specieskey = (Datalist[2].replace(';',',').replace(',','').split ( ' ') [0])
 
 
-
+		
 		print ('SPECIES'' {}'.format (Datalist[2]))
 
 		Morphodict [ str(Specieskey) ] = [Datalist [1] , Datalist [3] , Datalist [4]]
@@ -66,34 +66,38 @@ for Line in datafile:
 fields = sys.argv[2:]
 Specieskey = fields[0]
 Attributes = fields[1:]
+
 print ("\n\n\n")
-print ("Species Searched:")
+print (">>>:Species Searched:<<<")
 print ("\n")
 print (Specieskey)
 print ("\n")
 
 if Specieskey not in Morphodict:
-	print ("Go find it")
+	print ("!Go find it!")
 else:
-	if "geography" in Attributes:
+	if "geography" or "geo" in Attributes:
+		print ("\n")
 		print ("Result: Geography")
 		print (Morphodict[Specieskey][0])
 
 	if "maker" in Attributes:
+		print ("\n")
 		print ("Result: Maker")
 		print (Morphodict[Specieskey][1])
 
-	if "reference" in Attributes:
+	if "reference" or "ref" in Attributes:
+		print ("\n")
 		print ("Result: Reference")
 		print (Morphodict[Specieskey][2])
 
 	if "all" in Attributes:
+		print ("\n")
 		print ("Result: All Data")
 		print (Morphodict[Specieskey])
+
 	print ("\n")
-
 	print ("Analysis Concluded")
-
 	print ("\n")
 
 # Print the column header
