@@ -24,16 +24,13 @@ OK, here we go.
 
 ## Introduction and Goals
 
-The goal of my project is to produce a searchable database code that will enable fast manipulation of raw  morphological data. This database will be easily updated through manipulation of the excel source files. The output we would like to have is information related only to the fossil species in question and will enable fast searches in a huge morphological database.
+The goal of my project is to produce a searchable database code that will enable fast manipulation of raw  morphological data. This database will be easily updated through manipulation of the excel source files. The output we would like to have is information related only to the fossil species in question and will enable fast searches in a huge morphological database. In essence we will input the species name and the request a specific detail found in the database and consequently this and only this will be given as output.
 
 The methods I will use to do this are basic methods of data input and manipulation. Data will be input as text files, excel files
 using regular expressions and data wrangling to make data easier to work with.
-Molecular data will be formated similarly and emphasis will be given in processing the data and
-producing data matrixes/matrix probably using a dictionary of strings. 
-After formatting of the data files sepparately we will combine them and concatinate the various matrixes to use them in the tree producing software "..."
-for input in a phylogenetic program.
+With the use of dictionaries and lists we will be able to link search terms with all the possible answers.
 
-The data I will use are partly simulation and personnaly collected. I plan to have a small  data sample of a few species and if that proves succesful we can expand and input more data in the code we produced.
+The data I will use are partly simulation and personnaly collected. I plan to have a small  data sample of a few species and if that proves succesful we can expand and input more data in the code we produced. THe quality of the present database is very poor and contains errors that can be reformated through regular expressions and further text manipulation
 
 ## Methods
 
