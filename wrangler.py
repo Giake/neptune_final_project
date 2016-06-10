@@ -29,7 +29,7 @@ for Line in datafile:
 		#print ("Header List " + str(Headerlist))
 	else:
 	   	Datalist = Line.split( ':' )
-		#print ("Species data" + str(Datalist))
+		#print ("Species data" + str(Datalist)) 1ST STOP
 		#Datalist[2] = Datalist[2].split ( ',' )
 		Specieskey = (Datalist[2].replace(';',',').replace(',','').split ( ' ') [0])
 
